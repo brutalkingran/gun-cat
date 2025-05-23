@@ -15,37 +15,42 @@ const renders = [
 ];
 
 const MainComponent = () => {
+    const isMobile = window.innerWidth < 768; 
+    
     return (
         <div>
             {/* Carrusel con animación horizontal */}
             <div className="relative overflow-hidden min-h-screen">
                 {/* Fondo animado */}
                 <motion.div
-                    className="absolute top-0 left-0 flex gap-8 opacity-10 z-0 pointer-events-none"
+                    className="absolute top-0 left-0 flex items-center gap-8 opacity-10 z-0 pointer-events-none"
                     animate={{ x: ['0%', '-100%'] }}
-                    transition={{ duration: 40, ease: 'linear', repeat: Infinity }}>
+                    transition={{ duration: isMobile ? 60 : 40, ease: 'linear', repeat: Infinity }}
+                >
                     {[...renders, ...renders].map((img, i) => (
                     <img
                         key={i}
                         src={img}
                         alt={`render ${i}`}
-                        className="flex-shrink-0 w-96"
+                        className="flex-shrink-0 h-auto w-auto max-h-[90vh] object-contain"
                     />
                     ))}
                 </motion.div>
 
                 {/* Contenido principal */}
-                <main className="relative z-10 p-8 text-black">
-                    <div className="mb-6">
+                <main className="relative z-10 p-8 text-black h-screen bg-cover bg-center flex flex-col justify-center items-center">
+                    <div className="mb-6 flex flex-col items-center">
                         <img src={logo} alt="logo gunpla" className="w-3/4" />
                     </div>
+
                     <div className="mb-6 max-w-3xl">
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-center">
                             Sumérgete en el apasionante mundo del Gunpla, donde cada kit es una obra maestra de ingeniería y creatividad...
                         </p>
                     </div>
-                    <div>
-                        <a className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-md">
+                    
+                    <div className="text-white">
+                        <a href="#" className="bg-red-600 hover:bg-red-700 rounded-md cursor-pointer">
                             Descubre nuestro catálogo
                         </a>
                     </div>
