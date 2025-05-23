@@ -1,30 +1,27 @@
 import { FaGithub } from 'react-icons/fa';
 import logo from './../assets/icons/Gunpla_Logo.svg';
+import { FaBars } from "react-icons/fa6";
 
 const HeaderComponent = () => {
     return (
-        <div>
+        <div className='bg-red-100'>
             <nav>
-                <ul>
+                <ul className='flex items-center justify-between gap-6'>
                     <div>
-                        <img src={ logo } alt="logo" />
+                        <img src={ logo } alt="logo" className='w-48'/>
                     </div>
                     <div>
                         { /* Botón Hamburguesa (tamaño celular) */}
-                        <button>
-                            <svg>
-                                <path></path>
-                            </svg>
-                        </button>
+                        <FaBars className='md:invisible' />
                     </div>
-                    <li>Inicio</li>
-                    <li>Catálogo</li>
-                    <li>Disponibles</li>
-                    <li>Próximos Ingresos</li>
-                    <li>Contacto</li>
-                    <li>Soporte</li>
-                    <div>
-                        <a href="https://github.com/brutalkingran"> <FaGithub size={40} color="#333" aria-label="GitHub logo" /> </a>
+                    <div className='max-sm:invisible md:flex gap-4'>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Catálogo</a></li>
+                        <li><a href="#">Disponibles</a></li>
+                        <li><a href="#">Próximos Ingresos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Soporte</a></li>
+                        <a href="https://github.com/brutalkingran"> <FaGithub size={24} color="#333" aria-label="GitHub logo" /> </a>
                     </div>
                 </ul>
             </nav>
