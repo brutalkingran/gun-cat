@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
 
 @tailwind utilities;
 
@@ -10,4 +9,23 @@
     --color-palette-200: rgb(239, 254, 249);
     --color-palette-300: rgb(130, 180, 191);
     --color-palette-400: rgb(37, 73, 161);
+}
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: sans-serif;
+        /* color: #333; */
+    }
 }
