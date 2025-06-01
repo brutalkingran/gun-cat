@@ -4,7 +4,6 @@ import ScrollModelos from './ScrollModelos';
 const MainComponent = () => {
     return (
         <div className='bg-palette-200'>
-            {/* Carrusel con animación horizontal */}
             <div className="relative overflow-hidden min-h-screen">
                 {/* Fondo animado */}
                 <ScrollModelos/>
