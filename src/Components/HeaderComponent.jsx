@@ -3,17 +3,9 @@ import logo from './../assets/icons/Gunpla_Logo.svg';
 import { FaBars } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 import { FaGithub } from 'react-icons/fa';
+import { navbarLinks } from '../utils/links';
 
 const HeaderComponent = () => {
-  const navbarLinks = [
-    { id: 1, title: "Inicio", link: "/" },
-    { id: 2, title: "Catálogo", link : "/catalogo" },
-    { id: 3, title: "Disponibles", link: "/disponibles" },
-    { id: 4, title: "Próximos Ingresos", link: "/proximos_ingresos" },
-    { id: 5, title: "Contacto", link: "/contacto" },
-    { id: 6, title: "Soporte", link: "/soporte" },
-  ];
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
