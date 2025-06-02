@@ -7,7 +7,7 @@ const MainComponent = () => {
             <div className="relative overflow-hidden min-h-screen">
                 {/* Fondo animado */}
                 <ScrollModelos/>
-
+                {/* TODO: NAVBAR MOBILE ES OPACADO POR MAIN */}
                 {/* Contenido principal */}
                 <main className="relative z-10 p-8 text-black h-screen bg-cover bg-center flex flex-col justify-center items-center">
                     <div className="mb-6 flex flex-col items-center">
@@ -23,7 +23,6 @@ const MainComponent = () => {
                     <a href="#" className="bg-palette-400 hover:bg-palette-300 text-palette-200 text-lg px-8 py-4 rounded-md cursor-pointer shadow-lg transition duration-300">
                         Descubre nuestro catálogo
                     </a>
-
                 </main>
             </div>
         </div>

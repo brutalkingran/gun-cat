@@ -6,6 +6,7 @@ import { FaGithub } from 'react-icons/fa';
 import { navbarLinks } from '../utils/links';
 
 const HeaderComponent = () => {
+  // tab para mayusculas en snippet
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
