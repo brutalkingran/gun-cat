@@ -7,7 +7,6 @@ const MainComponent = () => {
             <div className="relative overflow-hidden min-h-screen">
                 {/* Fondo animado */}
                 <ScrollModelos/>
-                {/* TODO: NAVBAR MOBILE ES OPACADO POR MAIN */}
                 {/* Contenido principal */}
                 <main className="relative z-10 p-8 text-black h-screen bg-cover bg-center flex flex-col justify-center items-center">
                     <div className="mb-6 flex flex-col items-center">

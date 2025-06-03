@@ -28,7 +28,8 @@ const ScrollModelos = () => {
                     key={i}
                     src={img}
                     alt={`render ${i}`}
-                    className="flex-shrink-0 h-auto w-auto max-h-[90vh] object-contain"
+                    className="flex-shrink-0 h-auto w-auto max-h-[90vh] object-contain select-none"
+                    draggable={false}
                 />
                 ))}
             </motion.div>
