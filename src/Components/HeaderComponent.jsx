@@ -14,7 +14,7 @@ const HeaderComponent = () => {
   }
 
   return (
-    <header className='bg-palette-400 shadow-2xl font-sans font-thin text-white'>
+    <header className='bg-palette-400 shadow-2xl font-sans font-thin text-palette-200 relative z-50'>
       <nav className='max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between'>
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -47,32 +47,32 @@ const HeaderComponent = () => {
           {
             navbarLinks.map(({id, title, link}) => (
               <li key={id} className="hover:scale-110 transform transition-transform duration-200">
-                <a href={link} className="hover:text-palette-100 text-white transition duration-300">
+                <a href={link} className="hover:text-palette-100 text-palette-200 transition duration-300">
                   {title}
                 </a>
               </li>
             ))
           }
           <li className="hover:scale-110 transform transition-transform duration-200 hover:palette-50">
-            <a href="https://github.com/brutalkingran" className="transform transition-transform duration-200 hover:scale-110 text-white hover:text-palette-100"> <FaGithub size={24} aria-label="GitHub logo" /> </a>
+            <a href="https://github.com/brutalkingran" className="transform transition-transform duration-200 hover:scale-110 text-palette-200 hover:text-palette-100"> <FaGithub size={24} aria-label="GitHub logo" /> </a>
           </li>
         </ul>
       </nav>
 
         {/* VIEW MOBILE */}
-        <div className={`absolute w-full transition-all duration-300 bg-palette-50 md:hidden ${ isOpen ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`absolute w-full transition-all duration-300 bg-palette-50 md:hidden shadow-2xl ${ isOpen ? 'opacity-75' : 'opacity-0'}`}>
           {/* MOBILE LINKS */}
-          <ul className='flex flex-col px-4 py-2'>
+          <ul className='flex flex-col py-2'>
             {
               navbarLinks.map(({id, title, link}) => (
-                <li key={id} className='py-2 text-center'>
-                  <a href={link} className="hover:underline transition-colors text-palette-100">
+                <li key={id} className='py-2 text-center active:bg-palette-400 transition-all duration-200'>
+                  <a href={link} className="transition-colors text-palette-200">
                     {title}
                   </a>
                 </li>
               ))
             }
-            <li><a href="https://github.com/brutalkingran"> <FaGithub size={24} color="#ffd93c" aria-label="GitHub logo" /> </a></li>
+            <li className="px-4"><a href="https://github.com/brutalkingran" className="text-palette-200"> <FaGithub size={24} aria-label="GitHub logo" /> </a></li>
           </ul>
         </div>
     </header>
