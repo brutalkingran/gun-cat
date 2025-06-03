@@ -46,14 +46,16 @@ const HeaderComponent = () => {
         <ul className='hidden md:flex items-center gap-6'>
           {
             navbarLinks.map(({id, title, link}) => (
-              <li key={id}>
-                <a href={link} className="hover:underline transition-colors text-palette-100">
+              <li key={id} className="hover:scale-110 transform transition-transform duration-200">
+                <a href={link} className="hover:text-palette-100 text-white transition duration-300">
                   {title}
                 </a>
               </li>
             ))
           }
-          <li><a href="https://github.com/brutalkingran"> <FaGithub size={24} color="#ffd93c" aria-label="GitHub logo" /> </a></li>
+          <li className="hover:scale-110 transform transition-transform duration-200 hover:palette-50">
+            <a href="https://github.com/brutalkingran" className="transform transition-transform duration-200 hover:scale-110 text-white hover:text-palette-100"> <FaGithub size={24} aria-label="GitHub logo" /> </a>
+          </li>
         </ul>
       </nav>
 
