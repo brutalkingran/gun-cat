@@ -19,3 +19,5 @@ Crea una Landing Page que incluya:
    - Uso de animaciones con el paquete Framer Motion (puedes animar el ingreso de elementos).
 
 Basado en el siguiente landing page: [guía](https://classy-peony-f296dc.netlify.app/).
+
+Despliegue: [guncat.netlify.app/](https://guncat.netlify.app/)
